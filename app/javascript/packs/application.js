@@ -7,12 +7,26 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
-import React from 'react';
+
+import React from 'react'
 import { render } from 'react-dom';
-import SampleComponent from '../components/SampleComponent';
+import ReactDOM from 'react-dom'
+// import PropTypes from 'prop-types'
+import {HashRouter as Router, Route} from 'react-router-dom';
+import Webcam from '../components/Webcam';
+// import Webcam from 'react-webcam';
+import registerServiceWorker from './registerServiceWorker';
+
+
+const Routes = (
+  <Router>
+  <div>
+  <Route exact path="/register" component={ Webcam } />
+  </div>
+  </Router>
+);
 
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.body.appendChild(document.createElement('div'));
-    render(<SampleComponent />, container);
+    render(Routes, container);
 });
