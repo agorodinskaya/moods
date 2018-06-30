@@ -1,0 +1,9 @@
+development:
+  app_id: Rails.application.secrets.kairos_app_id
+  app_key: Rails.application.secrets.kairos_app_key
+production:
+  app_id: Rails.application.secrets.kairos_app_id
+  app_key: Rails.application.secrets.kairos_app_key
+test:
+  app_id: Rails.application.secrets.kairos_app_id
+  app_key: Rails.application.secrets.kairos_app_key
