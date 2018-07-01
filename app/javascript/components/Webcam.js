@@ -33,8 +33,8 @@ export default class Register extends Component {
             subject_id: 'Test'
         }, {        headers: {
                     'Content-Type': 'application/json',
-                    app_id: '048de122',
-                    app_key: 'ff633fe82a3c8b6d0d85095c4aceac2f'
+                    app_id: '',
+                    app_key: ''
                 }
             }).then((response) => {
               console.log('response:', response, response.data  );
