@@ -69,7 +69,7 @@ export default class Recognition extends Component {
         <div>
         <Camera
         audio={false}
-        screenshotFormat="image/jpeg"
+        screenshotFormat="image/png"
         ref={this.setRef}
         />
 
