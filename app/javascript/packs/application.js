@@ -13,7 +13,7 @@ import { render } from 'react-dom';
 import ReactDOM from 'react-dom'
 // import PropTypes from 'prop-types'
 import {HashRouter as Router, Route} from 'react-router-dom';
-import Webcam from '../components/Webcam';
+import Registration from '../components/Registration';
 // import Webcam from 'react-webcam';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -21,7 +21,7 @@ import registerServiceWorker from './registerServiceWorker';
 const Routes = (
   <Router>
   <div>
-  <Route exact path="/register" component={ Webcam } />
+  <Route exact path="/register" component={ Registration } />
   </div>
   </Router>
 );
