@@ -16,20 +16,19 @@ import {HashRouter as Router, Route} from 'react-router-dom';
 // import Login from '../components/Login';
 import Registration from '../components/Registration';
 import Recognition from '../components/Recognition';
-import Speech from '../components/Speech';
-import CamTest from '../components/CamTest';
+import Mood from '../components/Mood';
 import registerServiceWorker from './registerServiceWorker';
 
 
 const Routes = (
   <Router>
   <div>
-  {/*
+
   <Route exact path="/register" component={ Registration } />
   <Route exact path="/recognize" component={ Recognition } />
-  */}
-  <Route exact path="/speech" component={ Speech } />
-  <Route exact path="/camtest" component={ CamTest } />
+
+  <Route exact path="/mood" component={ Mood } />
+
 
 
   </div>

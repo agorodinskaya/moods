@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import Camera from 'react-webcam';
-
+import Mood from './Mood'
+import Speech from './Speech'
 import axios from 'axios';
 
 const K_VERIFY = 'https://api.kairos.com/recognize';
-const MS_URL = 'https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?';
+
 export default class Recognition extends Component {
     constructor(props){
       super(props);
@@ -13,7 +14,7 @@ export default class Recognition extends Component {
         status: false,
         username: '',
         email:'',
-        errors: '',
+        errors: ''
 
       };
       this.buttonClick = this.buttonClick.bind(this)
@@ -61,41 +62,22 @@ export default class Recognition extends Component {
         // Handle the response from Rails
         // this.results = response.data
         console.log('Rails LOGIN RESPONSE', response.data);
-
         // if successful
         if(response.data.user.k_face_id !== null){
-          // return axios.post(MS_URL,
-          //   {
-          //     /* form data here? */
-          //   },
-          //   {
-          //     // Axios config options
-          //     body: photo,
-          //     headers: {
-          //       'Content-Type': 'multipart/form-data',
-          //       // 'Ocp-Apim-Subscription-Key': '50142d4d105d488090e3e01771332002'
-          //       'Ocp-Apim-Subscription-Key': '240dc93db1e241669a8bf0883695ecce'
-          //   }
-          // });
+          this.setState({username: response.data.user.name, face_id: response.data.user.k_face_id});
+
+        }else{
+          this.setState({username:''})
         }
 
       })
-      .then(response => {
-        console.log('MS EMOTION:', response.data);
-
-        // return the emotion for raspberry pi - GET
-        // return axios.get('pi url');
-      })
-      .then(response => {
-        console.log('Raspberry pi:', response.data);
-        return status;
-      })
       .catch(err => {
         console.warn(err)
-      });
+      })
+    };
 
 
-    }
+
 
     render(){
       return (
@@ -110,8 +92,21 @@ export default class Recognition extends Component {
           <div className='controls'>
             <button onClick={this.buttonClick}>Check</button>
           </div>
-          {this.state.photo ? <img src={this.state.photo} /> : null}
+
         </div>
+
+
+        {this.state.face_id ?
+          <div>
+          {this.state.username}
+
+          <Mood/>
+          <Speech/>
+          </div>:
+          null}
+
+
+
 
 
       </div>

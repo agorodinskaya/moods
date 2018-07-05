@@ -53,6 +53,7 @@ export default class Register extends Component {
           })
       }).then(response => {
         console.log("Rails response:", response.data)
+
       })
       .catch(err => {
         console.warn(err)
@@ -73,11 +74,6 @@ export default class Register extends Component {
       axios.get('/current_user').then( console.warn );
     }
 
-    /// TODO API throttling?? NEED!! to reset the gallery because of the allowed # of pics ??
-
-    // resetGallery(){
-    //
-    // }
 
     render() {
         return (
@@ -90,15 +86,14 @@ export default class Register extends Component {
            />
 
              <h2>Your photo will be displayed in the below area when you press register button:</h2>
-             <div className='photos'>
-               <div className='controls'>
-               <textarea onChange={(event) => this.submitUser(event) }>
-               </textarea>
+             <div>
+               <div>
+               <input onChange={(event) => this.submitUser(event) }>
+               </input>
                  <button onClick={this.buttonClick}>Register</button>
-                 <button onClick={this.checkLogin}>TEST</button>
                </div>
                {this.state.photo ? <img src={this.state.photo} /> : null}
-             </div>
+               </div>
            </div>
        );
      }

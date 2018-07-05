@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import axios from 'axios';
-import Webcam from './Webcam'
+
 
 
 const SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
@@ -38,7 +38,7 @@ export default class Speech extends Component {
     if (!('webkitSpeechRecognition' in window)) {
       upgrade();
     } else {
-      console.log('MOUNTED!');
+      // console.log('MOUNTED!');
 
       this.recognition = new webkitSpeechRecognition();
       this.speechRecognitionList = new webkitSpeechGrammarList();
@@ -50,7 +50,7 @@ export default class Speech extends Component {
       this.recognition.maxAlternatives = 1;
 
       this.recognition.onstart = () => {
-        this.setState({recognizingInProgress: true});
+        this.setState({recognizingInProgress: true, speechText: ''});
         showInfo('info_speak_now');
 
       };
@@ -131,13 +131,15 @@ export default class Speech extends Component {
 
 
       <div>
-      <Webcam />
+
       <form>
       <textarea onChange={this.handleChange} value={ this.state.speechText }></textarea>
       <br/>
       <button onClick={this.toggleRecording}><img src={this.state.recognizingInProgress ? "/assets/mic-animate.gif" : "/assets/mic.gif"} className="img-responsive"/></button>
       <style>{`body {background-color: ${this.state.speechText} }`}</style>
+
       </form>
+
       </div>
 
     );

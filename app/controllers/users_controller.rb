@@ -32,6 +32,13 @@ class UsersController < ApplicationController
     end
   end
 
+  # def user_emotion
+  #   if user.present?
+  #     render json: {emotion: emotion}
+  #   else
+  #     render json: {user: nil}
+  # end
+
   def current_user
     render json: {user: nil} and return unless @current_user
     render json: {user: @current_user}
