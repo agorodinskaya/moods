@@ -945,6 +945,10 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
+bane@~1.1.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/bane/-/bane-1.1.2.tgz#bc64248cc823160c7df3f238b87fe62c44e107b9"
+
 base64-img@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/base64-img/-/base64-img-1.0.4.tgz#3e22d55d6c74a24553d840d2b1bc12a7db078d35"
@@ -2298,6 +2302,12 @@ faye-websocket@^0.10.0:
 faye-websocket@~0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.11.1.tgz#f0efe18c4f56e4f40afc7e06c719fd5ee6188f38"
+  dependencies:
+    websocket-driver ">=0.5.1"
+
+faye-websocket@~0.9.2:
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.9.4.tgz#885934c79effb0409549e0c0a3801ed17a40cdad"
   dependencies:
     websocket-driver ">=0.5.1"
 
@@ -3789,6 +3799,14 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+mopidy@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/mopidy/-/mopidy-0.5.0.tgz#a19863e08beb53e6d1f80cc17f1ed37aee4c1147"
+  dependencies:
+    bane "~1.1.0"
+    faye-websocket "~0.9.2"
+    when "~3.7.2"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -6424,6 +6442,10 @@ websocket@~1.0.26:
 whatwg-fetch@>=0.10.0, whatwg-fetch@^2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
+
+when@~3.7.2:
+  version "3.7.8"
+  resolved "https://registry.yarnpkg.com/when/-/when-3.7.8.tgz#c7130b6a7ea04693e842cdc9e7a1f2aa39a39f82"
 
 whet.extend@~0.9.9:
   version "0.9.9"

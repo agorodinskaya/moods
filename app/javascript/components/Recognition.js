@@ -29,7 +29,7 @@ export default class Recognition extends Component {
         status: true
       });
       axios.post(K_VERIFY, {
-        gallery_name: 'TEST-1',
+        gallery_name: 'TEST-NEW',
         image: photo
       },
       {
@@ -89,7 +89,7 @@ export default class Recognition extends Component {
 
         <div className='photos'>
           <div className='controls'>
-            <button onClick={this.buttonClick}>Check</button>
+            <button onClick={this.buttonClick}>Recognize</button>
           </div>
 
         </div>

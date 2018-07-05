@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
   def create
     puts params, "*" * 50
-    user = User.create name: params[:username], k_face_id: params[:face_id]
+
+    moods = {
+      'happy' => 'spotify:track:67rvuV6oRGppOyXZk9OUrs',
+      'sad' => 'spotify:track:1mvghSCONexEGEuSJVbnsT'
+    }
+    
+    user = User.create name: params[:username], k_face_id: params[:face_id], emotions: moods
 
     if user.persisted?
       session[:user_id] = user.id
@@ -33,10 +39,13 @@ class UsersController < ApplicationController
   end
 
   # def user_emotion
+  #   user = User.find_by k_face_id: params[:face_id]
   #   if user.present?
-  #     render json: {emotion: emotion}
+  #     user = User.update emotions: params[:emotion]
+  #     render json: {user: user}
   #   else
   #     render json: {user: nil}
+  #   end
   # end
 
   def current_user

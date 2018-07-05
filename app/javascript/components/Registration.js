@@ -32,7 +32,7 @@ export default class Register extends Component {
       });
       // console.log(photo, status);
       axios.post(K_ENROLL, {
-        gallery_name: 'TEST-1',
+        gallery_name: 'TEST-NEW',
           image: photo,
           subject_id: this.state.username
       },
@@ -41,7 +41,7 @@ export default class Register extends Component {
           'Content-Type': 'application/json',
           app_id, app_key
       }})
-      .then((response) => {
+      .then(response => {
         console.log('response:', response, response.data  );
           this.setState({
               status: false
