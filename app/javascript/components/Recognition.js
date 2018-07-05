@@ -35,8 +35,7 @@ export default class Recognition extends Component {
       {
         headers: {
           'Content-Type': 'application/json',
-          app_id: '048de122',
-          app_key: 'ff633fe82a3c8b6d0d85095c4aceac2f'
+          app_id, app_key
         }
       }).then(response =>{
 
@@ -103,7 +102,9 @@ export default class Recognition extends Component {
           <Mood/>
           <Speech/>
           </div>:
-          null}
+          <p id="message">
+          "Please Login using Recognize Button or SignUp to enroll your picture"
+          </p>}
 
 
 
