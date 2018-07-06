@@ -14,14 +14,116 @@
  *= require_self
  */
 
-$background: pink;
+
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+
+*{
+  font-family: 'Gaegu', cursive;
+  margin: 5px 80px 5px 50px;
+  justify-content: center;
+  align-items: center;
+
+}
 
 body{
-  background-color: $background;
+  border: 2px solid #4197f4;
 }
 
 .webcam {
   /* width: 40%;
   height: 40%; */
   border: 2px solid black;
+}
+
+.btnH{
+
+  margin-top: 10px;
+  background: #4197f4;
+  background-image: linear-gradient(top, #4197f4, #22334f);
+  background-image: linear-gradient(to bottom, #4197f4, #22334f);
+  border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 3px 2px 1px #5f7c8c;
+  box-shadow: 6px 5px 24px #666666;
+  font-family: Arial;
+  color: white;
+  font-size: 27px;
+  padding: 19px;
+  text-decoration: none;
+}
+.btnH:hover {
+  background: #22334f;
+  background-image: linear-gradient(top, #22334f, #4197f4);
+  background-image: linear-gradient(to bottom, #22334f, #4197f4);
+  text-decoration: none;
+}
+.btnU{
+  color: #4197f4;
+  border: 2px solid #4197f4;
+  border-radius: 6px;
+  color: #4197f4;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.btnU:hover {
+      background-color: #4197f4;
+      color: white;
+ }
+
+ #typing h1 {
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+   border-right: .15em solid #4197f4; /* The typwriter cursor */
+   white-space: nowrap; /* Keeps the content on a single line */
+   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+   letter-spacing: .15em; /* Adjust as needed */
+   animation:
+     typing 3.5s steps(40, end),
+     blink-caret .75s step-end infinite;
+  }
+
+ /* The typing effect */
+ @keyframes typing {
+   from { width: 0 }
+   to { width: 70% }
+ }
+
+ /* The typewriter cursor effect */
+ @keyframes blink-caret {
+   from, to { border-color: transparent }
+   50% { border-color: #4197f4; }
+ }
+ .RegIn{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 22px;
+ }
+#imgH{
+    width: 200px;
+    margin-left: 300px;
+
+
+  }
+h1{
+  width:400px;
+}
+.Mic{
+  border: 2px solid black;
+}
+
+.name{
+  font-size: 20px;
+  padding-right: 10px;
 }

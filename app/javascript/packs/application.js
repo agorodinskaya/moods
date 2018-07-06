@@ -17,17 +17,20 @@ import {HashRouter as Router, Route} from 'react-router-dom';
 import Registration from '../components/Registration';
 import Recognition from '../components/Recognition';
 import Mood from '../components/Mood';
+import Home from '../components/Home';
+import Speech from '../components/Speech';
 import registerServiceWorker from './registerServiceWorker';
 
 
 const Routes = (
   <Router>
   <div>
-
+  <Route exact path="/" component={ Home } />
   <Route exact path="/register" component={ Registration } />
   <Route exact path="/recognize" component={ Recognition } />
-
   <Route exact path="/mood" component={ Mood } />
+  <Route exact path="/speech" component={ Speech } />
+
 
 
 

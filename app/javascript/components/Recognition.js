@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Camera from 'react-webcam';
 import Mood from './Mood'
 import Speech from './Speech'
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const K_VERIFY = 'https://api.kairos.com/recognize';
@@ -14,7 +15,8 @@ export default class Recognition extends Component {
         status: false,
         username: '',
         email:'',
-        errors: ''
+        errors: '',
+        emotions:{},
 
       };
       this.buttonClick = this.buttonClick.bind(this)
@@ -29,7 +31,7 @@ export default class Recognition extends Component {
         status: true
       });
       axios.post(K_VERIFY, {
-        gallery_name: 'TEST-NEW',
+        gallery_name: 'TEST-FIN1',
         image: photo
       },
       {
@@ -63,7 +65,7 @@ export default class Recognition extends Component {
         console.log('Rails LOGIN RESPONSE', response.data);
         // if successful
         if(response.data.user.k_face_id !== null){
-          this.setState({username: response.data.user.name, face_id: response.data.user.k_face_id});
+          this.setState({username: response.data.user.name, face_id: response.data.user.k_face_id, emotions: response.data.user.emotions});
 
         }else{
           this.setState({username:''})
@@ -85,32 +87,32 @@ export default class Recognition extends Component {
         audio={false}
         screenshotFormat="image/jpeg"
         ref={this.setRef}
+        width={520}
         />
 
         <div className='photos'>
           <div className='controls'>
-            <button onClick={this.buttonClick}>Recognize</button>
+            <button className="btnU" onClick={this.buttonClick}>Recognize</button>
           </div>
 
         </div>
 
 
-        {this.state.face_id ?
+         {this.state.face_id ?
           <div>
-          {this.state.username}
-
+          <p className="name">
+          Hello {this.state.username}
+          </p>
           <Mood/>
           <Speech/>
           </div>:
           <p id="message">
-          "Please Login using Recognize Button or SignUp to enroll your picture"
+          Please Login using Recognize Button or Register to enroll your picture by following the below link.
           </p>}
-
-
-
-
-
-      </div>
+          <Link to="/register">Register</Link>
+          <br/>
+          <Link to="/">Home</Link>
+        </div>
       )
 
     }

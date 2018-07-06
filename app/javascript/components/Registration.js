@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Camera from 'react-webcam';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const K_ENROLL = 'https://api.kairos.com/enroll';
 
@@ -12,7 +13,8 @@ export default class Register extends Component {
         photo: null,
         status: false,
         username: '',
-        email:''
+        email:'',
+        err:''
       }
       this.buttonClick = this.buttonClick.bind(this);
       this.submitUser = this.submitUser.bind(this);
@@ -32,7 +34,7 @@ export default class Register extends Component {
       });
       // console.log(photo, status);
       axios.post(K_ENROLL, {
-        gallery_name: 'TEST-NEW',
+        gallery_name: 'TEST-FIN1',
           image: photo,
           subject_id: this.state.username
       },
@@ -55,7 +57,8 @@ export default class Register extends Component {
 
       })
       .catch(err => {
-        console.warn(err)
+        console.warn(err);
+        // this.setState({err:this.response.Errors})
       })
 
     };
@@ -82,17 +85,27 @@ export default class Register extends Component {
              audio={false}
              screenshotFormat="image/jpeg"
              ref={this.setRef}
+             width={520}
            />
 
              <h2>Your photo will be displayed in the below area when you press register button:</h2>
              <div>
                <div>
-               <input onChange={(event) => this.submitUser(event) }>
+               <p> Please enter username:</p>
+               <input className="RegIn" onChange={(event) => this.submitUser(event) }>
                </input>
-                 <button onClick={this.buttonClick}>Register</button>
+                 <button className="btnU" onClick={this.buttonClick}>Register</button>
                </div>
-               {this.state.photo ? <img src={this.state.photo} /> : null}
+                {this.state.photo ?
+                 <div>
+                 <p>Saving image...</p>
+                 <img src={this.state.photo} />
+                  </div>: null}
                </div>
+               <Link to="/">Home</Link>
+               <br/>
+               <Link to="/recognize">Recognize</Link>
+
            </div>
        );
      }

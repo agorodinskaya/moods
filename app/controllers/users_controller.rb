@@ -4,9 +4,9 @@ class UsersController < ApplicationController
 
     moods = {
       'happy' => 'spotify:track:67rvuV6oRGppOyXZk9OUrs',
-      'sad' => 'spotify:track:1mvghSCONexEGEuSJVbnsT'
+      'sad' => 'spotify:track:1mvghSCONexEGEuSJVbnsT',
     }
-    
+
     user = User.create name: params[:username], k_face_id: params[:face_id], emotions: moods
 
     if user.persisted?

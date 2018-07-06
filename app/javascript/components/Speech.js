@@ -135,7 +135,7 @@ export default class Speech extends Component {
       <form>
       <textarea onChange={this.handleChange} value={ this.state.speechText }></textarea>
       <br/>
-      <button onClick={this.toggleRecording}><img src={this.state.recognizingInProgress ? "/assets/mic-animate.gif" : "/assets/mic.gif"} className="img-responsive"/></button>
+      <button onClick={this.toggleRecording}><img className="Mic" src={this.state.recognizingInProgress ? "/assets/mic-animate.gif" : "/assets/mic.gif"} className="img-responsive"/></button>
       <style>{`body {background-color: ${this.state.speechText} }`}</style>
 
       </form>
