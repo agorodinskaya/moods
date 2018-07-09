@@ -34,7 +34,7 @@ export default class Register extends Component {
       });
       // console.log(photo, status);
       axios.post(K_ENROLL, {
-        gallery_name: 'TEST-FIN1',
+        gallery_name: 'DEMO-D',
           image: photo,
           subject_id: this.state.username
       },

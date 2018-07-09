@@ -31,7 +31,7 @@ export default class Recognition extends Component {
         status: true
       });
       axios.post(K_VERIFY, {
-        gallery_name: 'TEST-FIN1',
+        gallery_name: 'DEMO-D',
         image: photo
       },
       {
