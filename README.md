@@ -19,7 +19,7 @@ _Specifications of languages, libraries and frameworks used_ :
 - Raspberry Pi - small single-board computer. 
 
 _Wishlist_ : 
-- I would like to add more features to the website: e.g. video exchange between users, geo location of the space stations, rate questions etc. 
+- I would like to add more features to the website: e.g. RGB lights depending on the mood, add one more Raspberry pi, add Emotional recognition API for face and voice etc. 
 
 _Known bugs_:
 - nothing known so far.
