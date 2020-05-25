@@ -25,4 +25,4 @@ _Wishlist_ :
 - I would like to add more features to the website: e.g. RGB lights depending on the mood, add one more Raspberry pi, add Emotional recognition API for face and voice etc. 
 
 _Known bugs_:
-- a few bugs related to obsolete gems - currently working on fixing those issues.
+- a few bugs related to obsolete gems - currently working on fixing of those issues.
