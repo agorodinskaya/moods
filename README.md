@@ -18,8 +18,11 @@ _Specifications of languages, libraries and frameworks used_ :
 - Web Speech API - built in browser speech recognition and synthesis API 
 - Raspberry Pi - small single-board computer. 
 
+ # Important : 
+ Unfortunately the face recognition API being no longer free, does not allow to demonstrate the full functionality of the project. Sorry about that. 
+
 _Wishlist_ : 
 - I would like to add more features to the website: e.g. RGB lights depending on the mood, add one more Raspberry pi, add Emotional recognition API for face and voice etc. 
 
 _Known bugs_:
-- nothing known so far.
+- a few bugs related to obsolete gems - currently working on fixing those issues.
