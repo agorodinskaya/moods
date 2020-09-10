@@ -1,7 +1,4 @@
-# Facemood App:
-Please follow the link to access the demo:
-[Facemood App]
-https://www.youtube.com/watch?v=RR6Vydx3s-s&feature=youtu.be
+
 
 # General:
 The App recognises the users face and plays music based on the chosen mood, projecting it on Raspberry pi. It also uses the users voice to change the background colour of the app.
