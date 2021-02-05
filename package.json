@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@rails/webpacker": "3.5",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-preset-react": "^6.24.1",
     "base64-img": "^1.0.4",
     "jsonwebtoken": "^8.3.0",
