@@ -4,7 +4,7 @@
 The App recognises the users face and plays music based on the chosen mood, projecting it on Raspberry pi. It also uses the users voice to change the background colour of the app.
 
 Please see the video Demo here ---> [Demo Link](https://www.youtube.com/watch?v=RR6Vydx3s-s&feature=youtu.be).
-Unfortunately the API used for this project became unavailable. I will redo this project soon 🤞🛠🎨. 
+**Unfortunately the API used for this project became unavailable, plus would love to rewrite React part with Hooks. I will redo this project soon 🤞🛠🎨.** 
 
 _Specifications of languages, libraries and frameworks used_ :
 - Ruby on Rails - Back-end 
