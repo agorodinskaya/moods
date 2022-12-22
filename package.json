@@ -9,7 +9,7 @@
     "axios": "^0.21.2",
     "babel-preset-react": "^6.24.1",
     "base64-img": "^1.0.4",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "mopidy": "^0.5.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
